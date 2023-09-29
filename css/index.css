@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/************ toujourfours mettre * avec les padding et margin à 0*********/
+
+html{
+    scroll-behavior: smooth; /****ajoute un effet au scroll vers les *****/
+}
+
+/*************header****************/
+header{
+    height: 100vh; /** 100 viewport height" toute la hauteur de l'écran*****/
+    background: url(../img/montagne.jpg) center bottom fixed;/**pour sortir du dossier CSS faire ../ ****/
+    background-size: cover;
+}
+
+header nav{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    right: 0;
+}
+
+header nav ul{
+    height: 50px;/***hauteur de la ul****/
+    display: flex;/***permettre aux enfants d'^tre les uns à coté des autres******/
+    list-style: none;/***permettre la répartition su rla largeur******/
+    justify-content: flex-end;/***répartition de la largeur****/
+    align-items: center;/****repartition de la hauteur****/
+    list-style: none;/******enlèver les puces de la lise*****/
+}
+
+header nav ul li{
+    margin: 0 20px;/***ajoute des marges à gauche et à droite de la li****/
+}
+
+header nav ul li a{
+    text-decoration: none;/****enlève le soulignement des liens****/
+    color: white;/***change la couleur du texte****/
+    font-family: Arial, Helvetica, sans-serif;/****change la famille de typo****/
+    font-weight: bold;/*****change la graisse de la typo***/
+    text-transform:uppercase/****passe le texte en majuscule****/
+}
+
+header nav ul li a:hover{
+    border-bottom: 2px solid black; /***ajoute une bordure en bas au survol***/
+    opacity: 0,5;/***va créer un opacité au survol***/
+    color: black;/****change la couleur des textes au survol****/
+}
+
+header div{
+    height: calc(100vh - 50px);/***pour que la div occupe le reste de l'écran on retire les 50px de la hauteur de la nav au 100vh (hauteur complète de l'écran***/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*************fin du header*************/
+
+/***style pour les 2 sections************/
+section{
+    padding: 100px 0;/*** joute du rembourrage (marge interne) à la section***/
+}
+
+section h2{
+    text-align: center;/***permet de centrer le titre***/
+    text-transform: capitalize;/*** va mettre une majuscule à tout les titre H2 de la section***/
+}
+
+section > div{ /**sélection de la div de premier niveau***/
+    display: flex;/***permet aux div enfants de se mettre les unes à côté des autres***/
+    justify-content: center;/*** permet de centrer les div enfants***/
+    transition: 1s;
+}
+
+section>div div{/***sélectionne les div enfants des le premier niveau***/
+    width: 150px;
+    height: 150px;
+    background: teal;
+    margin: 50px; /***va permettre d'éloigner les div les unes des autres***/
+    transition: 1s;/*** durée effet délai***/
+}
+
+section>div div:hover{/***sélectionne les div enfants des le premier niveau***/
+    background: mistyrose;
+} 
+
+
+/*************style section 2*************/
+section:nth-of-type(2){/***sélectionne la 2ème section du parent***/
+    background: teal;
+    transition: 1s;
+}
+
+section:nth-of-type(2):hover{
+    background: mistyrose;
+   
+}
+
+section:nth-of-type(2)>div>div{
+    background: white;
+}
+
+/*************footer**************/
+footer{
+    height: 400px;
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p{
+    color: white;
+}
